@@ -1,13 +1,18 @@
-const User = require("../models/User");
+const User = require("../models/user");
 
 const bcrypt = require("bcrypt");
 
 const createUser = async (req, res) => {
   try {
     //logica para crear usuario
-    const { username, email, password, } = req.body; 
+    const {name, lastName, age,address, phone, username, email, password, } = req.body; 
     //crear la instancia de el usuario
     const user = new User({
+      name:name,
+      lastName: lastName, 
+       age:age, 
+      address:address,
+      phone:phone,
       username: username,
       email: email,
       password: password,
