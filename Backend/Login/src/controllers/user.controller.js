@@ -1,22 +1,23 @@
-const User = require("../models/user");
+const User = require("../models/User");
 
 const bcrypt = require("bcrypt");
 
 const createUser = async (req, res) => {
   try {
     //logica para crear usuario
-    const {name, lastName, age,address, phone, username, email, password, } = req.body; 
+    const { name,lastName , age, address,phone, username,  email, password } = req.body; //["admin"] //req.params y req.query => vienen desde el endpoint   'o  se los puedo agregar yo en el middleware
+
     //crear la instancia de el usuario
     const user = new User({
       name:name,
-      lastName: lastName, 
-       age:age, 
+      lastName:lastName,
+      age:age,
       address:address,
       phone:phone,
       username: username,
       email: email,
-      password: password,
-     
+      password: password, 
+    
     });
 
     ////encriptar la contraseña sin método estatico
@@ -31,9 +32,13 @@ const createUser = async (req, res) => {
 
     res.status(200).json({
       _id: newUser._id,
+      lastName: newUser.lastName,
+      age:newUser.age,
+      address:newUser.address,
+      phone:newUser.phone,
       username: newUser.username,
-      mail: newUser.email,
-     
+      email: newUser.email,
+      
     });
     
   } catch (error) {
