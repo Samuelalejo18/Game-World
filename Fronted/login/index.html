@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login y Register - MagtimusPro</title>
 
@@ -11,7 +12,7 @@
         rel="stylesheet">
 
 
-    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
@@ -35,33 +36,33 @@
             <!--Formulario de Login y registro-->
             <div class="contenedor__login-register">
                 <!--Login-->
-                <form action="" class="formulario__login">
+                <form  class="formulario__login">
                     <h2>Iniciar Sesión</h2>
-                    <input type="text" placeholder="Correo Electronico" id="email">
-                    <input type="password" placeholder="Contraseña" id="password">
-                    <button>Entrar</button>
+                    <input type="text" placeholder="Correo Electronico" id="email" required>
+                    <input type="password" placeholder="Contraseña" id="password" required>
+                    <button id="SignIn">Entrar</button>
                 </form>
 
                 <!--Register-->
-                <form action="" class="formulario__register">
+                <form  class="formulario__register">
                     <h2>Regístrarse</h2>
-                    <input type="text" placeholder="Nombres ">
-                    <input type="text" placeholder="Apellidos">
-                    <input type="number" placeholder="Edad">
-                    <input type="text" placeholder="Dirección">
-                    <input type="number" placeholder="Número de celular">
-                    <input type="text" placeholder="Usuario">
-                    <input type="text" placeholder="Correo Electronico">
-                    <input type="password" placeholder="Contraseña">
-                    <button>Regístrarse</button>
+                    <input type="text" placeholder="Nombres " required id="name" >
+                    <input type="text" placeholder="Apellidos" required id="lastName">
+                    <input type="number" placeholder="Edad" required id="age">
+                    <input type="text" placeholder="Dirección" required id="address">
+                    <input type="number" placeholder="Número de celular" required id="phone">
+                    <input type="text" placeholder="Usuario" required id="user">
+                    <input type="text" placeholder="Correo Electronico" required id="email">
+                    <input type="password" placeholder="Contraseña" required id="password">
+                    <button id="SignUp">Regístrarse</button>
                 </form>
             </div>
         </div>
 
     </main>
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/index.js"></script>
+    <script  type="module" src="js/script.js"></script>
+    <script   type="module" src="js/index.js"></script>
 </body>
 
 <footer>
