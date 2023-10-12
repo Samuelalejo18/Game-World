@@ -1,0 +1,14 @@
+POST  http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+  "name":"samuel",
+  "lastName":"Monsalve Sarmiento ", 
+  "age": 20,
+  "address":"carrera norte",
+  "phone":3214193306,
+  "username":"samuelalejo181",
+  "email":"samuelalejomonsalve1@gmail.com",
+  "password":"Lukas2012"
+}
+ 
