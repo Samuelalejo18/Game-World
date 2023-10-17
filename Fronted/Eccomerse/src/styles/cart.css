@@ -34,7 +34,7 @@ justify-content: center;
 
 .contentRight {
     height: auto;
-    background-color: white;
+background-color: white;
 
     width: 40%;
 }
@@ -135,6 +135,7 @@ justify-content: center;
     width: 100%;
     text-align: center;
     margin: 1rem;
+   
  
 }
 
