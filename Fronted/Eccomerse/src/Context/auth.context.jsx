@@ -47,6 +47,10 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+
+
+
+
   const signIn = async (user) => {
     try {
       const res = await loginRequest(user);
@@ -58,6 +62,8 @@ export const AuthProvider = ({ children }) => {
       setErrors(error.response.data.message);
     }
   };
+
+
 
   // Elimar los mensajes pasado un tiempo
   useEffect(() => {

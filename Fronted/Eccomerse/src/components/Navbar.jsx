@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/auth.context";
 function NavBar() {
 
-
+    const { isAuthenticated, logout, user } = useAuth();
+    console.log(user);
+    const handleLogout = () => {
+        logout();
+        
+      };
     return (
         <>
 
@@ -28,12 +34,39 @@ function NavBar() {
                     </ul>
 
                 </nav>
+                {isAuthenticated ? (
+                    <>
+                        <ul className="nav-links">
 
-                <a className="btn" href="#">
-                    <Link to='/register'>
-                        <button>Register</button>
-                    </Link>
-                </a>
+                            <li>
+                                
+                                    <a href="#">WELCOME USER</a>
+                             
+                            </li>
+                        </ul>
+                        <a className="btn" href="#">
+
+                        <button onClick={handleLogout}>Logout</button>
+                        </a>
+                        <p>Welcome user</p>
+                    </>
+
+
+                ) : (
+                    <>
+                        <a className="btn" href="#">
+                            <Link to='/register'>
+                                <button>Register</button>
+                            </Link>
+                        </a>
+                        <a className="btn" href="#">
+                            <Link to='/login'>
+                                <button>Login</button>
+                            </Link>
+                        </a>
+                    </>
+                )}
+
                 <div className="search-box">
 
                     <button className="btn-search">
@@ -43,11 +76,7 @@ function NavBar() {
                     <input type="text" className="input-search" placeholder="Type to Search..." />
 
                 </div>
-                <a className="btn" href="#">
-                    <Link to='/login'>
-                        <button>Login</button>
-                    </Link>
-                </a>
+
 
             </header >
 

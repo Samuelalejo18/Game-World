@@ -14,31 +14,32 @@ function App() {
 
 
   return (
-    <>
+    <>    <AuthProvider>
       <DatProvider>
-        <AuthProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route path='/' element={<HomePage />} />
-              <Route path='/shop' element={<Shop />} />
-     
-            </Routes>
 
-            <Routes>
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/register" element={<RegisterPage />} />
-      
-              <Route path="/SuccessfulRegistration" element={<SuccessfulRegistration />} />
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/shop' element={<Shop />} />
+
+          </Routes>
+
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+
+            <Route path="/SuccessfulRegistration" element={<SuccessfulRegistration />} />
+
+            <Route element={<ProtectedRoute />}>
               <Route path='/CarMarket' element={<CarMarket />} />
-              <Route element={<ProtectedRoute />}>
 
-      
-              </Route>
+            </Route>
 
-            </Routes>
-          </BrowserRouter>
-        </AuthProvider>
+          </Routes>
+        </BrowserRouter>
+
       </DatProvider>
+    </AuthProvider>
     </>
   )
 }

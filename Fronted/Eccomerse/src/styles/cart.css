@@ -1,16 +1,8 @@
-#CarEmpty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10rem;
-}
-
-
 .Main {
     width: 100%;
     height: auto;
     display: flex;
-justify-content: center;
+    justify-content: center;
 }
 
 
@@ -34,7 +26,7 @@ justify-content: center;
 
 .contentRight {
     height: auto;
-background-color: white;
+    background-color: white;
 
     width: 40%;
 }
@@ -49,20 +41,21 @@ background-color: white;
     margin-top: 2rem;
     margin-left: 2rem;
 }
+
 .Customer {
     width: 100%;
     margin: 1rem;
 }
 
 
-.Customer p{
+.Customer p {
     font-size: 2rem;
     margin-top: 2rem;
     margin-left: 4rem;
 }
 
 
-.CustomerContent{
+.CustomerContent {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -70,63 +63,67 @@ background-color: white;
     margin-left: 4rem;
 }
 
-.CustomerLeft{
+.CustomerLeft {
     width: 50%;
 }
 
-.CustomerLeft p{
+.CustomerLeft p {
     padding: 0.7rem;
     font-size: 1.3rem;
 }
-.CustomerRight{
+
+.CustomerRight {
     width: 50%;
 }
 
-.CustomerRight p{
+.CustomerRight p {
     padding: 0.7rem;
     font-size: 1.3rem;
 }
-.ElementsCart{
+
+.ElementsCart {
     width: 100%;
 }
 
-.ProductsCart{
+.ProductsCart {
     margin-top: 2rem;
-    
+
     margin-left: 2rem;
     background-color: white;
-    width: 93%; 
+    width: 93%;
     height: 11rem;
     border-radius: 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-.ContentProductImg{
+.ContentProductImg {
     margin: 0;
     padding: 0;
-    width: 22%;
+    width: 19%;
     height: 8rem;
     overflow: hidden;
-    margin-left:1rem ;
-    margin-right:1rem ;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
-.ContentProductImg img{
+
+.ContentProductImg img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.ProductInformation{
+.ProductInformation {
     display: flex;
     margin-right: 1rem;
     flex-direction: column;
-    width: 20%;
+    width: 18%;
 
 }
-.ProductInformation p{
+
+.ProductInformation p {
     padding: 0.7rem;
     font-size: 1.1rem;
 }
@@ -135,8 +132,8 @@ background-color: white;
     width: 100%;
     text-align: center;
     margin: 1rem;
-   
- 
+
+
 }
 
 .Summary p {
@@ -145,122 +142,135 @@ background-color: white;
     margin-left: 5rem;
     margin-Right: 5rem;
     padding: 2rem;
-    border-bottom: 8px solid rgb(242,245,255);
-}
-.SummaryContent{
- width: 100%;
- display: flex;
- flex-direction: row;
-
-}
-.SummaryLeft{
-    margin-top: 0.5rem;
-    width: 50%;
-    border-bottom: 8px solid rgb(242,245,255);
-}
-.SummaryLeft p{
-
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    margin-left:5rem ;
+    border-bottom: 8px solid rgb(242, 245, 255);
 }
 
-.SummaryRight{
-    margin-top: 0.5rem;
-    flex-direction: column;
-    width: 50%;
-    font-display: flex;
-    text-align: right;
-
-    border-bottom: 8px solid rgb(242,245,255);
-}
-.PricesP{
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    margin-right:5rem ;
-}
-
-
-.ShipmentContent{
+.SummaryContent {
     width: 100%;
     display: flex;
     flex-direction: row;
-   
-   }
-   .ShipmentLeft{
-       margin-top: 0.5rem;
-       width: 50%;
-       border-bottom: 8px solid rgb(242,245,255);
-   }
-   .ShipmentLeft p{
-   
-       font-size: 1.2rem;
-       padding: 0.5rem;
-       margin-left:5rem ;
-   }
-   
-   .ShipmentRight{
-    
+
+}
+
+.ubicacion {
+    height: 5%;
+    width: 5%;
+}
+
+.SummaryLeft {
+    margin-top: 0.5rem;
+    width: 50%;
+    border-bottom: 8px solid rgb(242, 245, 255);
+}
+
+.SummaryLeft p {
+
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-left: 5rem;
+}
+
+.SummaryRight {
+    margin-top: 0.5rem;
     flex-direction: column;
     width: 50%;
     font-display: flex;
     text-align: right;
-  margin-top: 1rem;
-    border-bottom: 8px solid rgb(242,245,255);
+
+    border-bottom: 8px solid rgb(242, 245, 255);
 }
 
-.ShipmentRight p{
-   color: rgb(0,123,255);
+.PricesP {
     font-size: 1.2rem;
     padding: 0.5rem;
-    margin-right:5rem ;
+    margin-right: 5rem;
 }
 
 
-
-.YouPay{
+.ShipmentContent {
     width: 100%;
     display: flex;
     flex-direction: row;
-   
-   }
-   .PaytLeft{
-       margin-top: 0.5rem;
-       width: 50%;
-       border-bottom: 8px solid rgb(242,245,255);
-   }
-   .PaytLeft p{
-   
-       font-size: 1.8rem;
-       padding: 0.5rem;
-       margin-left:5rem ;
-   }
-   
-   .PayRight{
-    
+
+}
+
+.ShipmentLeft {
+    margin-top: 0.5rem;
+    width: 50%;
+    border-bottom: 8px solid rgb(242, 245, 255);
+}
+
+.ShipmentLeft p {
+
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-left: 5rem;
+}
+
+.ShipmentRight {
+
     flex-direction: column;
     width: 50%;
     font-display: flex;
     text-align: right;
-  margin-top: 1rem;
-    border-bottom: 8px solid rgb(242,245,255);
+    margin-top: 1rem;
+    border-bottom: 8px solid rgb(242, 245, 255);
 }
 
-.PayRight p{
-   color: rgb(0,123,255);
+.ShipmentRight p {
+    color: rgb(0, 123, 255);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-right: 5rem;
+}
+
+
+
+.YouPay {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.PaytLeft {
+    margin-top: 0.5rem;
+    width: 50%;
+    border-bottom: 8px solid rgb(242, 245, 255);
+}
+
+.PaytLeft p {
+
     font-size: 1.8rem;
     padding: 0.5rem;
-    margin-right:2rem ;
+    margin-left: 5rem;
+}
+
+.PayRight {
+
+    flex-direction: column;
+    width: 50%;
+    font-display: flex;
+    text-align: right;
+    margin-top: 1rem;
+    border-bottom: 8px solid rgb(242, 245, 255);
+}
+
+.PayRight p {
+    color: rgb(0, 123, 255);
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    margin-right: 2rem;
 }
 
 .frame {
     width: 90%;
     margin: 40px auto;
     text-align: center;
-  }
+}
 
-  .custom-btn {
-    width: 130px;
+.custom-btn {
+    width: 80%;
     height: 40px;
     color: #fff;
     border-radius: 5px;
@@ -273,82 +283,157 @@ background-color: white;
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
-  }
-  .btn-3 {
-    background: rgb(0,172,238);
-  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
-    width: 30rem;
-    height: 3rem;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    animation: pulse 2s infinite;
+    /* Animación de pulso */
+}
+
+.custom-btn:hover {
+    background-color: #0004ff;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Escala el botón al 110% a la mitad de la animación */
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-3 {
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+    width: 80%;
+    height: 15%;
     line-height: 42px;
     padding: 0;
     border: none;
-    
-  }
-  .btn-3 span {
+
+}
+
+.btn-3 span {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
-  }
-  .btn-3:before,
-  .btn-3:after {
+}
+
+
+
+
+.btn-3:before,
+.btn-3:after {
     position: absolute;
     content: "";
     right: 0;
     top: 0;
-     background: rgba(2,126,251,1);
+    background: rgba(2, 126, 251, 1);
     transition: all 0.3s ease;
-  }
-  .btn-3:before {
+}
+
+.btn-3:before {
     height: 0%;
     width: 2px;
-  }
-  .btn-3:after {
+}
+
+.btn-3:after {
     width: 0%;
     height: 2px;
-  }
-  .btn-3:hover{
-     background: transparent;
+}
+
+.btn-3:hover {
+    background: transparent;
     box-shadow: none;
-  }
-  .btn-3:hover:before {
+}
+
+.btn-3:hover:before {
     height: 100%;
-  }
-  .btn-3:hover:after {
+}
+
+.btn-3:hover:after {
     width: 100%;
-  }
-  .btn-3 span:hover{
-     color: rgba(2,126,251,1);
-  }
-  .btn-3 span:before,
-  .btn-3 span:after {
+}
+
+.btn-3 span:hover {
+    color: rgba(2, 126, 251, 1);
+}
+
+.btn-3 span:before,
+.btn-3 span:after {
     position: absolute;
     content: "";
     left: 0;
     bottom: 0;
-     background: rgba(2,126,251,1);
+    background: rgba(2, 126, 251, 1);
     transition: all 0.3s ease;
-  }
-  .btn-3 span:before {
+}
+
+.btn-3 span:before {
     width: 2px;
     height: 0%;
-  }
-  .btn-3 span:after {
+}
+
+.btn-3 span:after {
     width: 0%;
     height: 2px;
-  }
-  .btn-3 span:hover:before {
+}
+
+.btn-3 span:hover:before {
     height: 100%;
-  }
-  .btn-3 span:hover:after {
+}
+
+.btn-3 span:hover:after {
     width: 100%;
-  }
-  
+}
 
 
+.CarEmpty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    width: 100%;
 
+}
 
+.EmptyContent {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.EmptyContent h1 {
+    font-size: 550%;
+}
+.imgEmpty{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgEmpty img{
+    width: 50%;
+    height: 50%;
+}
+
+.ButtonEmpty{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}

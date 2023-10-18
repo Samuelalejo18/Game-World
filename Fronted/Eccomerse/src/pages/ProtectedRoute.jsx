@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { Navigate, Outlet } from 'react-router-dom';
-import { useAuth } from '../Context/auth.context';
+import { useAuth } from '../context/auth.context';
 
 function ProtectedRoute() {
   // eslint-disable-next-line no-unused-vars
