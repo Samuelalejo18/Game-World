@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/auth.context";
 import data from "../js/data";
-function NavBar({setProducts,products}) {
+function NavBar({ setProducts, products }) {
 
     const { isAuthenticated, logout, user } = useAuth();
 
@@ -13,21 +13,21 @@ function NavBar({setProducts,products}) {
 
     };
 
-    const  [input,setInput]=useState(false);
+    const [input, setInput] = useState(false);
 
-    const handleInput = (e)=>{
+    const handleInput = (e) => {
         console.log(e.target.value);
-   
-       // setInput(e.target.value) 
-      const foundProduct= products.filter(product=>product.name.includes(e.target.value));
-      console.log(foundProduct);  
-      if(products.lenght===0){
-        setProducts(data)
-      }else{
-        setProducts(foundProduct); 
-      }
- 
-      }
+
+        // setInput(e.target.value) 
+        const foundProduct = products.filter(product => product.name.includes(e.target.value));
+        console.log(foundProduct);
+        if (products.lenght === 0) {
+            setProducts(data)
+        } else {
+            setProducts(foundProduct);
+        }
+
+    }
 
     return (
         <>
@@ -61,7 +61,7 @@ function NavBar({setProducts,products}) {
 
                             <li>
 
-                                <a href="#">WELCOME USER</a>
+                                <a href="#">Welcome <span id="userName">{user.username}</span></a>
 
                             </li>
                         </ul>
@@ -69,7 +69,7 @@ function NavBar({setProducts,products}) {
 
                             <button onClick={handleLogout}>Logout</button>
                         </a>
-                        <p>Welcome user</p>
+                     
                     </>
 
 

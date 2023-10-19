@@ -7,8 +7,8 @@ import CartElements from "../components/CarContent/cartElements";
 import { useAuth } from "../context/auth.context";
 import '../styles/cart.css';
 function CarMarket() {
-  const { logout, user} = useAuth();
-console.log(user);
+  const { logout, user } = useAuth();
+
   const handleLogout = () => {
     logout();
 
@@ -19,6 +19,15 @@ console.log(user);
     <>
 
       <nav className="header">
+
+        <ul className="nav-links">
+
+          <li>
+
+            <a href="#"> <span id="userName">{user.username}</span></a>
+
+          </li>
+        </ul>
         <a className="btn" href="#">
 
           <button onClick={handleLogout}>Logout</button>
@@ -46,11 +55,11 @@ console.log(user);
                 <p> Send to :</p>
               </div>
               <div className="CustomerRight">
-                <p><img src="./src/assets/usuario.png" className="ubicacion"></img> {user.name}</p>
-               
-                <p><img src="./src/assets/usuario.png" className="ubicacion"></img>  </p>
-                <p><img src="./src/assets/llamada.png" className="ubicacion"></img> </p>
-                <p><img src="./src/assets/ubicacion.png" className="ubicacion"></img> </p>
+                <p><img src="./src/assets/usuario.png" className="ubicacion"></img>   {user.name}</p>
+
+                <p><img src="./src/assets/usuario.png" className="ubicacion"></img>   {user.lastName}  </p>
+                <p><img src="./src/assets/llamada.png" className="ubicacion"></img>  {user.phone}</p>
+                <p><img src="./src/assets/ubicacion.png" className="ubicacion"></img>   {user.address}</p>
               </div>
             </div>
 

@@ -13,7 +13,9 @@ const authRoutes = require("./routes/auth.routes.js");
 
 
 //configuraciones de express
-server.use(cors({  origin:  'http://localhost:5173'}));
+server.use(cors({ 
+     origin:  'http://localhost:8000',
+     credentials:true}));
 server.use(morgan('dev'));
 server.use(express.urlencoded({ extended: false }));
 server.use(express.json());
