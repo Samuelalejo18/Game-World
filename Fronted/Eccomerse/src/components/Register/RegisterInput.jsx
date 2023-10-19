@@ -1,24 +1,18 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable import/named */
-/* eslint-disable no-param-reassign */
-/* eslint-disable import/extensions */
+
 /* eslint-disable no-console */
 /* eslint-disable react/jsx-props-no-spreading */
-import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/auth.context';
 
 function Register() {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { signUp, isAuthenticated, errors: registerErrors } = useAuth();
-  const navigate = useNavigate();
+  const { signUp, errors: registerErrors } = useAuth();
 
-  useEffect(() => {
-    if (isAuthenticated) navigate('/SuccessfulRegistration');
-  }, [isAuthenticated]);
+
+
   const onSubmit = handleSubmit(async (values) => {
   // console.log(values);
     signUp(values);

@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { dataContext } from "../Context/Data.Context";
+
 const ProductList = ({ products }) => {
     const { cart, setCart } = useContext(dataContext);
     const buyProducts = (product) => {

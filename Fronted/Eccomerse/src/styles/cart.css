@@ -437,3 +437,20 @@
     display: flex;
     justify-content: center;
 }
+
+#close{
+    border: 1px solid rgba(0, 0, 0, 0.513);
+    background-color: white;
+    padding: 0.2rem;
+    border-radius: 50%;
+    position: relative;
+    bottom: 5.1rem;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+#close:hover {
+    background-color: black;
+  transform: scale(1.3);
+}

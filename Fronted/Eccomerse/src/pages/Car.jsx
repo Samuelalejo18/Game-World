@@ -7,10 +7,8 @@ import CartElements from "../components/CarContent/cartElements";
 import { useAuth } from "../context/auth.context";
 import '../styles/cart.css';
 function CarMarket() {
-  const { logout, user } = useAuth();
-  console.log(user);
-  console.log(user.name);
-  console.log(user.phone);
+  const { logout, user} = useAuth();
+console.log(user);
   const handleLogout = () => {
     logout();
 
@@ -48,11 +46,11 @@ function CarMarket() {
                 <p> Send to :</p>
               </div>
               <div className="CustomerRight">
-                <p><img src="./src/assets/usuario.png" className="ubicacion"></img> {user.username} </p>
+                <p><img src="./src/assets/usuario.png" className="ubicacion"></img> {user.name}</p>
                
-                <p><img src="./src/assets/usuario.png" className="ubicacion"></img> {user.lastname}  </p>
-                <p><img src="./src/assets/llamada.png" className="ubicacion"></img>  {user.phone}  </p>
-                <p><img src="./src/assets/ubicacion.png" className="ubicacion"></img>  {user.address}</p>
+                <p><img src="./src/assets/usuario.png" className="ubicacion"></img>  </p>
+                <p><img src="./src/assets/llamada.png" className="ubicacion"></img> </p>
+                <p><img src="./src/assets/ubicacion.png" className="ubicacion"></img> </p>
               </div>
             </div>
 

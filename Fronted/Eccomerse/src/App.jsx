@@ -7,7 +7,6 @@ import ProtectedRoute from './pages/ProtectedRoute';
 import { SuccessfulRegistration } from './pages/SuccessfulRegistration';
 import HomePage from './pages/home';
 import LoginPage from './pages/loginPage';
-
 import RegisterPage from './pages/registerPage';
 import Shop from './pages/shop';
 function App() {
@@ -29,6 +28,7 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
 
             <Route path="/SuccessfulRegistration" element={<SuccessfulRegistration />} />
+
 
             <Route element={<ProtectedRoute />}>
               <Route path='/CarMarket' element={<CarMarket />} />

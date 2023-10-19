@@ -3,7 +3,6 @@ const data = [
         id: 1,
         company: 'Nintendo',
         category: 'Console',
-
         name: 'Nintendo Switch lite',
         Description: 'Nintendo Switch lite',
         price: 199,
@@ -149,7 +148,7 @@ const data = [
     {
         id: 17,
         company: 'Xbox',
-        category:'Console',
+        category: 'Console',
         name: ' Xbox Series X ',
         Description: 'Xbox Series X 1TB ',
         price: 499,
@@ -158,7 +157,7 @@ const data = [
     {
         id: 18,
         company: 'Xbox',
-        category:'Console',
+        category: 'Console',
         name: ' Xbox Series S ',
         Description: 'Xbox Series S 1TB Black ',
         price: 349,
@@ -167,7 +166,7 @@ const data = [
     {
         id: 19,
         company: 'Xbox',
-        category:'Console',
+        category: 'Console',
         name: ' Xbox Series S ',
         Description: 'Xbox Series S 1TB White ',
         price: 349,
@@ -176,7 +175,7 @@ const data = [
     {
         id: 20,
         company: 'Xbox',
-        category:'Console',
+        category: 'Console',
         name: ' Xbox One X ',
         Description: 'Xbox One X 1TB Black ',
         price: 399,
@@ -185,7 +184,7 @@ const data = [
     {
         id: 21,
         company: 'Xbox',
-        category:'Console',
+        category: 'Console',
         name: ' Xbox One Old ',
         Description: 'Xbox One Old (2013) ',
         price: 149,
@@ -194,7 +193,7 @@ const data = [
     {
         id: 22,
         company: 'Xbox',
-        category:'Console',
+        category: 'Console',
         name: ' Xbox One S ',
         Description: 'Xbox One S  ',
         price: 250,
@@ -203,7 +202,7 @@ const data = [
     {
         id: 23,
         company: 'Xbox',
-        category:'Controll',
+        category: 'Controll',
         name: 'Xbox  Controller',
         Description: 'Xbox Controller',
         price: 59,
@@ -212,7 +211,7 @@ const data = [
     {
         id: 24,
         company: 'Xbox',
-        category:'Console',
+        category: 'Console',
         name: 'Xbox One S ',
         Description: 'Xbox One S GW edition',
         price: 300,
@@ -221,7 +220,7 @@ const data = [
     {
         id: 25,
         company: 'Nintendo',
-        category:'Console',
+        category: 'Console',
         name: 'Wii U',
         Description: 'Nintendo Wii u',
         price: 150,
@@ -230,7 +229,7 @@ const data = [
     {
         id: 26,
         company: 'Nintendo',
-        category:'Console',
+        category: 'Console',
         name: 'Wii ',
         Description: 'Nintendo Wii ',
         price: 100,
@@ -239,7 +238,7 @@ const data = [
     {
         id: 27,
         company: 'Nintendo',
-        category:'Console',
+        category: 'Console',
         name: 'GameCub ',
         Description: 'Nintendo GameCub',
         price: 100,
@@ -248,7 +247,7 @@ const data = [
     {
         id: 28,
         company: 'Nintendo',
-        category:'Console',
+        category: 'Console',
         name: 'Nintendo 64 ',
         Description: 'Nintendo 64',
         price: 59,
@@ -257,7 +256,7 @@ const data = [
     {
         id: 29,
         company: 'Nintendo',
-        category:'Console',
+        category: 'Console',
         name: 'SNES ',
         Description: ' Super Nintendo Entertainment System',
         price: 59,
@@ -266,7 +265,7 @@ const data = [
     {
         id: 30,
         company: 'Nintendo',
-        category:'Console',
+        category: 'Console',
         name: 'NES ',
         Description: '  Nintendo Entertainment System',
         price: 59,
@@ -320,13 +319,13 @@ const data = [
     {
         id: 36,
         company: 'Xbox',
-        category:'Console',
+        category: 'Console',
         name: ' Xbox 360 ',
         Description: 'Microsoft Xbox 360',
         price: 99,
         img: 'src/assets/xbox360.png',
     },
-    
-   
+
+
 ]
 export default data;

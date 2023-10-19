@@ -2,12 +2,20 @@ import { useContext } from "react";
 import { dataContext } from "../../Context/Data.Context";
 import '../../styles/cart.css';
 const CartElements = () => {
-    const { cart } = useContext(dataContext);
+ 
+    const { cart, setCart } = useContext(dataContext);
 
+    const handleRemoveFromCart = (productId) => {
+        // Filtrar el carrito para eliminar el producto con el ID proporcionado
+        const updatedCart = cart.filter(product => product.id !== productId);
+        setCart(updatedCart);
+    };
     return cart.map((product) => {
+
         return (
 
             <div className="ProductsCart" key={product.id}>
+            <button id="close" onClick={() => handleRemoveFromCart(product.id)}>❌</button>
                 <div className="ContentProductImg">
                     <img src={product.img} alt={product.name} className="ProductImg" />
                 </div>

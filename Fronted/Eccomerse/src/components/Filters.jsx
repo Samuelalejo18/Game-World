@@ -2,9 +2,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
-import data from '../js/data';
+
 import '../styles/filter.css';
-function Filters({ changeFilters }) {
+function Filters({ SetFilters, filters }) {
   useEffect(() => {
     const rangeInput = document.querySelectorAll(".range-input input");
     const priceInput = document.querySelectorAll(".price-input input");
@@ -52,48 +52,21 @@ function Filters({ changeFilters }) {
       input.addEventListener("input", handleRangeInput);
     });
   }, []);
-  /*
-    const [minPrice, setMinPrice] = useState(0);
-  
-    const handleChangeMinPrice = (event) => {
-      setMinPrice(event.target.value)
-      onchange(prevState => ({
-        ...prevState,
-        minPrice: event.target.value
-      }))
+
+
+    const handleFilter = (e)=>{
+      SetFilters({...filters, [e.target.name]: e.target.value}) 
+    
     }
-  
-    const handleChangeCategory = (event) => {
-  
-      onchange(prevState => ({
-        ...prevState,
-        category: event.target.value
-      }))
-    }
-  */
+
 
   const [category, setCategory] = useState({
     Console: false,
     Controll: false,
   });
-  const [categoryFiltred, setCategoryFiltred] = useState([]);
-  const handleOncheckbox = (e) => {
-    setCategory({
-      ...category,
-      [e.target.value]: e.target.checked,
-    });
-    if(e.target.checked){
-      const resultCategory=data.filter(product=>product.category===e.target.value)
-      setCategoryFiltred([...categoryFiltred,category])
-      console.log(categoryFiltred);
-    }else{
-      const resultCategory=categoryFiltred.filter(product=>product.category!==e.target.value)
-      setCategoryFiltred([...categoryFiltred,category])
-      console.log(categoryFiltred);
-    }
 
-  }
 
+  
 
   return (
     <>
@@ -125,7 +98,8 @@ function Filters({ changeFilters }) {
               max={500}
               defaultValue={250}
               step={10}
-
+              name='minPrice'
+              onChange={(e)=> handleFilter(e)}
             />
             <input
               type="range"
@@ -134,6 +108,8 @@ function Filters({ changeFilters }) {
               max={500}
               defaultValue={500}
               step={10}
+              name='maxPrice'
+              onChange={(e)=> handleFilter(e)}
             />
           </div>
         </div>
@@ -144,16 +120,16 @@ function Filters({ changeFilters }) {
           </header>
           <div className="py">
             <label>
-              <input onChange={handleOncheckbox} type="checkBox" className="option-input radio" name="example" value='all' defaultChecked=""
+              <input  onClick={(e)=> handleFilter(e)} type="radio" className="option-input radio" name="category" id='category' value='all' defaultChecked=""
               />
               all
             </label>
             <label>
-              <input onChange={handleOncheckbox} type="checkBox" className="option-input radio" name="example" value='Console' />
+              <input  onClick={(e)=> handleFilter(e)} type="radio" className="option-input radio" name="category" id='category' value='Console' />
               Console
             </label>
             <label>
-              <input onChange={handleOncheckbox} type="checkBox" className="option-input radio" name="example" value='Controll' />
+              <input  onClick={(e)=> handleFilter(e)} type="radio" className="option-input radio" name="category" id='category' value='Controll' />
               Controller
             </label>
           </div>

@@ -1,13 +1,34 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/auth.context";
-function NavBar() {
+import data from "../js/data";
+function NavBar({setProducts,products}) {
 
     const { isAuthenticated, logout, user } = useAuth();
-    console.log(user);
+
     const handleLogout = () => {
         logout();
-        
-      };
+
+    };
+
+    const  [input,setInput]=useState(false);
+
+    const handleInput = (e)=>{
+        console.log(e.target.value);
+   
+       // setInput(e.target.value) 
+      const foundProduct= products.filter(product=>product.name.includes(e.target.value));
+      console.log(foundProduct);  
+      if(products.lenght===0){
+        setProducts(data)
+      }else{
+        setProducts(foundProduct); 
+      }
+ 
+      }
+
     return (
         <>
 
@@ -39,14 +60,14 @@ function NavBar() {
                         <ul className="nav-links">
 
                             <li>
-                                
-                                    <a href="#">WELCOME USER</a>
-                             
+
+                                <a href="#">WELCOME USER</a>
+
                             </li>
                         </ul>
                         <a className="btn" href="#">
 
-                        <button onClick={handleLogout}>Logout</button>
+                            <button onClick={handleLogout}>Logout</button>
                         </a>
                         <p>Welcome user</p>
                     </>
@@ -73,7 +94,7 @@ function NavBar() {
                         <i className="fas fa-search" />
                     </button>
 
-                    <input type="text" className="input-search" placeholder="Type to Search..." />
+                    <input onChange={handleInput} type="text" className="input-search" placeholder="Type to Search..." />
 
                 </div>
 

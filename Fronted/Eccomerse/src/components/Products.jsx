@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import data from '../js/data';
@@ -5,14 +6,15 @@ import '../styles/Products.css';
 import ButtonList from './Buttonlist';
 import Filters from './Filters';
 import ProductList from './ProductsList';
-function Products() {
+function Products({products,setProducts}) {
     const allCompany = ['All', ...new Set(data.map(product => product.company))];
     const [companies, setCompanies] = useState(allCompany);
-    const [products, setProducts] = useState(data);
+    
     const [filters, SetFilters] = useState({
         company: 'All',
-        category: 'all',
+        category: 'Console',
         minPrice: 0,
+        maxPrice:500,
     });
 
     // Aplicar el filtro de la empresa
@@ -24,7 +26,7 @@ function Products() {
     const filteredProducts = filteredByCompany.filter(product => {
         return (
             (filters.category === 'all' || product.category === filters.category) &&
-            product.price >= filters.minPrice
+            product.price >= filters.minPrice &&  product.price <=filters.maxPrice
         );
     });
     const filtrerCompany = (company) => {
@@ -39,7 +41,7 @@ function Products() {
             </div>
            
             <div className="content">
-            <Filters changeFilters={SetFilters} />
+            <Filters SetFilters={SetFilters} filters={filters} />
                 <ProductList products={filteredProducts} />
             </div>
         </>
