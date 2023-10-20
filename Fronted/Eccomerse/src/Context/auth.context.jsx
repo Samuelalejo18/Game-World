@@ -41,15 +41,11 @@ export const AuthProvider = ({ children }) => {
       const res = await registerRequest(user);
 
       setUser(res.data);
-      //setIsAuthenticated(true);
+      // setIsAuthenticated(true);
     } catch (error) {
       setErrors(error.response.data);
     }
   };
-
-
-
-
 
   const signIn = async (user) => {
     try {
@@ -62,8 +58,6 @@ export const AuthProvider = ({ children }) => {
       setErrors(error.response.data.message);
     }
   };
-
-
 
   // Elimar los mensajes pasado un tiempo
   useEffect(() => {
@@ -86,7 +80,7 @@ export const AuthProvider = ({ children }) => {
 
       try {
         const res = await verifyTokenRequest(cookies.token);
-      
+
         if (!res.data) return setIsAuthenticated(false);
         setIsAuthenticated(true);
         setUser(res.data);

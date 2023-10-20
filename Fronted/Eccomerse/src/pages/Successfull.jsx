@@ -1,17 +1,19 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
-import { dataContext } from "../Context/Data.Context";
-import CartTotal from "../components/CarContent/CartTotal";
-import Prices from "../components/CarContent/Prices";
-import PurchasedCartItems from "../components/CarContent/purchased_cart_items";
-import { useAuth } from "../context/auth.context";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/alt-text */
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { dataContext } from '../Context/Data.Context';
+import CartTotal from '../components/CarContent/CartTotal';
+import Prices from '../components/CarContent/Prices';
+import PurchasedCartItems from '../components/CarContent/purchased_cart_items';
+import { useAuth } from '../context/auth.context';
 import '../styles/cart.css';
+
 function SuccessfulPayment() {
   const { logout, user } = useAuth();
 
   const handleLogout = () => {
     logout();
-
   };
 
   const { cart } = useContext(dataContext);
@@ -24,24 +26,26 @@ function SuccessfulPayment() {
 
           <li>
 
-            <a href="#"> <span id="userName">{user.username}</span></a>
+            <a href="#">
+              {' '}
+              <span id="userName">{user.username}</span>
+            </a>
 
           </li>
         </ul>
         <a className="btn" href="#">
 
-          <button onClick={handleLogout}>Logout</button>
+          <button type="button" onClick={handleLogout}>Logout</button>
         </a>
 
-        <Link to='/shop'>
+        <Link to="/shop">
           <a className="btn" href="#">
-            <button>⏪Back</button>
+            <button type="button">⏪Back</button>
           </a>
         </Link>
-      </nav >
+      </nav>
 
       <main className="Main">
-
 
         <div className="cartContent">
           <div className="contentleft">
@@ -55,20 +59,36 @@ function SuccessfulPayment() {
                 <p> Send to :</p>
               </div>
               <div className="CustomerRight">
-                <p><img src="./src/assets/usuario.png" className="ubicacion"></img>   {user.name}</p>
+                <p>
+                  <img src="./src/assets/usuario.png" className="ubicacion" />
+                  {' '}
+                  {user.name}
+                </p>
 
-                <p><img src="./src/assets/usuario.png" className="ubicacion"></img>   {user.lastName}  </p>
-                <p><img src="./src/assets/llamada.png" className="ubicacion"></img>  {user.phone}</p>
-                <p><img src="./src/assets/ubicacion.png" className="ubicacion"></img>   {user.address}</p>
+                <p>
+                  <img src="./src/assets/usuario.png" className="ubicacion" />
+                  {' '}
+                  {user.lastName}
+                  {' '}
+                </p>
+                <p>
+                  <img src="./src/assets/llamada.png" className="ubicacion" />
+                  {' '}
+                  {user.phone}
+                </p>
+                <p>
+                  <img src="./src/assets/ubicacion.png" className="ubicacion" />
+                  {' '}
+                  {user.address}
+                </p>
               </div>
             </div>
 
             <div className="ElementsCart">
-            <div className="Customer"><p>Purchases made: </p></div>
-            <PurchasedCartItems/>
+              <div className="Customer"><p>Purchases made: </p></div>
+              <PurchasedCartItems />
             </div>
           </div>
-
 
           <div className="contentRight">
             <div className="Summary">
@@ -95,25 +115,26 @@ function SuccessfulPayment() {
                 <p>You paid: </p>
               </div>
               <div className="PayRight">
-                <p> <CartTotal /></p>
+                <p>
+                  {' '}
+                  <CartTotal />
+                </p>
               </div>
             </div>
             <div className="frame">
-             
-                <p className="Successfull" >
-                 <strong>Successful purchase thank you for your purchase</strong>
-                </p>
-                <p className="Successfull" >
-                 <strong>✅</strong>
-                </p>
-          
+
+              <p className="Successfull">
+                <strong>Successful purchase thank you for your purchase</strong>
+              </p>
+              <p className="Successfull">
+                <strong>✅</strong>
+              </p>
 
             </div>
 
           </div>
         </div>
-      </main >
-
+      </main>
 
       <footer className="footer">
         <div className="container1">
@@ -191,24 +212,24 @@ function SuccessfulPayment() {
       <nav className="header">
         <a className="btn" href="#">
 
-          <button onClick={handleLogout}>Logout</button>
+          <button type="button" onClick={handleLogout}>Logout</button>
         </a>
-      </nav >
+      </nav>
       <main className="CarEmpty">
         <div className="EmptyContent">
           <h1 className="CartEmpty">Your cart is empty</h1>
           <div className="imgEmpty">
-            <img src="./src/assets/carro.gif"></img>
+            <img src="./src/assets/carro.gif" />
           </div>
           <div className="ButtonEmpty">
-            <Link to='/shop'>
+            <Link to="/shop">
 
-              <button className="shop">⏪Back</button>
+              <button type="button" className="shop">⏪Back</button>
 
             </Link>
           </div>
         </div>
-      </main >
+      </main>
       <footer className="footer">
         <div className="container1">
           <div className="grid-4">
@@ -280,16 +301,7 @@ function SuccessfulPayment() {
         </div>
       </footer>
     </>
-  )
+  );
 }
-
-
-
-
-
-
-
-
-
 
 export default SuccessfulPayment;

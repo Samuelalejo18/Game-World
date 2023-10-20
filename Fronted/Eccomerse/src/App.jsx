@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import DatProvider from './Context/Data.Context';
 import { AuthProvider } from './context/auth.context';
@@ -10,39 +9,38 @@ import LoginPage from './pages/loginPage';
 import Pay from './pages/pay';
 import RegisterPage from './pages/registerPage';
 import Shop from './pages/shop';
+
 function App() {
-
-
   return (
-    <>    <AuthProvider>
-      <DatProvider>
+    <>
+      {' '}
+      <AuthProvider>
+        <DatProvider>
 
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/shop' element={<Shop />} />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/shop" element={<Shop />} />
 
-          </Routes>
+            </Routes>
 
-          <Routes>
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-           
+            <Routes>
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
 
+              <Route element={<ProtectedRoute />}>
+                <Route path="/CarMarket" element={<CarMarket />} />
+                <Route path="/Pay" element={<Pay />} />
+                <Route path="/SuccessfulPayment" element={<SuccessfulPayment />} />
+              </Route>
 
-            <Route element={<ProtectedRoute />}>
-              <Route path='/CarMarket' element={<CarMarket />} />
-              <Route path="/Pay" element={<Pay />} />
-              <Route path="/SuccessfulPayment" element={<SuccessfulPayment />} />
-            </Route>
+            </Routes>
+          </BrowserRouter>
 
-          </Routes>
-        </BrowserRouter>
-
-      </DatProvider>
-    </AuthProvider>
+        </DatProvider>
+      </AuthProvider>
     </>
-  )
+  );
 }
 
 export default App;

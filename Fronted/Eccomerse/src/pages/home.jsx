@@ -1,8 +1,12 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable max-len */
 /* eslint-disable react/no-unescaped-entities */
 
 import { Link } from 'react-router-dom';
 import Carrusel from '../components/carrusel';
 import '../styles/home.css';
+
 function HomePage() {
   return (
     <div>
@@ -20,18 +24,15 @@ function HomePage() {
             <img src="./src/assets/img/shapes/letters.png" className="letters" alt="" />
             <img src="./src/assets/img/shapes/points1.png" className="points points1" alt="" />
           </div>
-          <nav className='black'>
+          <nav className="black">
             <div className="container1">
               <div className="logo" />
               <div className="links">
-                
-                 
-                
-                 
-                  <Link to="/shop">
-                 <button className='shop'>Shop 🛍️  ⏩</button>
-                  </Link>
-                
+
+                <Link to="/shop">
+                  <button type="button" className="shop">Shop 🛍️  ⏩</button>
+                </Link>
+
               </div>
             </div>
           </nav>
@@ -45,24 +46,14 @@ function HomePage() {
 
                 </p>
               </div>
-            
+
               <img src="./src/assets/img/shapes/2.png" />
-              <div className="column-2 image">
-              
-              </div>
+              <div className="column-2 image" />
             </div>
           </div>
         </header>
 
-<Carrusel/>
-
-
-
-
-
-
-
-
+        <Carrusel />
 
         <section className="services section" id="services">
           <div className="container1">

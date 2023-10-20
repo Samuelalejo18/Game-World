@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import Register from '../components/Register/RegisterInput';
 import '../styles/Register.css';
@@ -16,13 +15,13 @@ function RegisterPage() {
 
       <div className="panels-container">
         <div className="panel left-panel">
-          
+
           <div className="content">
-          <h3>Back to the shop</h3>
-       
-       <Link to="/shop">
-              <button className='shop1'> ⏪ Shop 🛍️  </button>
-               </Link>
+            <h3>Back to the shop</h3>
+
+            <Link to="/shop">
+              <button type="button" className="shop1"> ⏪ Shop 🛍️  </button>
+            </Link>
             <h3>Are you already logged in?</h3>
             <p>Log in to enter the main page</p>
             <Link to="/login">

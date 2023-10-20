@@ -11,8 +11,6 @@ function Register() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const { signUp, errors: registerErrors } = useAuth();
 
-
-
   const onSubmit = handleSubmit(async (values) => {
   // console.log(values);
     signUp(values);
@@ -35,7 +33,8 @@ function Register() {
 */
   return (
 
-    <form className='formInput'
+    <form
+      className="formInput"
       // onSubmit={handleSubmit(onSubmit)}
       // className="sign-form"
       onSubmit={onSubmit}
