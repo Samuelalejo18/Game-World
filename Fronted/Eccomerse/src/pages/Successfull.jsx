@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import { dataContext } from "../Context/Data.Context";
 import CartTotal from "../components/CarContent/CartTotal";
 import Prices from "../components/CarContent/Prices";
-import CartElements from "../components/CarContent/cartElements";
+import PurchasedCartItems from "../components/CarContent/purchased_cart_items";
 import { useAuth } from "../context/auth.context";
-
 import '../styles/cart.css';
-function CarMarket() {
+function SuccessfulPayment() {
   const { logout, user } = useAuth();
 
   const handleLogout = () => {
@@ -46,8 +45,8 @@ function CarMarket() {
 
         <div className="cartContent">
           <div className="contentleft">
-            <div className="YourProducts "><p>All your products</p></div>
-            <div className="Customer"><p>Customer information :</p></div>
+            <div className="YourProducts "><p>All your purchases</p></div>
+            <div className="Customer"><p>Shipping Information :</p></div>
             <div className="CustomerContent">
               <div className="CustomerLeft">
                 <p>Name :</p>
@@ -65,7 +64,8 @@ function CarMarket() {
             </div>
 
             <div className="ElementsCart">
-              <CartElements />
+            <div className="Customer"><p>Purchases made: </p></div>
+            <PurchasedCartItems/>
             </div>
           </div>
 
@@ -92,18 +92,21 @@ function CarMarket() {
             </div>
             <div className="YouPay">
               <div className="PaytLeft">
-                <p>You Pay :</p>
+                <p>You paid: </p>
               </div>
               <div className="PayRight">
                 <p> <CartTotal /></p>
               </div>
             </div>
             <div className="frame">
-              <Link to='/Pay'>
-                <button className="custom-btn btn-3">
-                  <span><strong>Pay</strong> </span>
-                </button>
-              </Link>
+             
+                <p className="Successfull" >
+                 <strong>Successful purchase thank you for your purchase</strong>
+                </p>
+                <p className="Successfull" >
+                 <strong>✅</strong>
+                </p>
+          
 
             </div>
 
@@ -289,4 +292,4 @@ function CarMarket() {
 
 
 
-export default CarMarket;
+export default SuccessfulPayment;

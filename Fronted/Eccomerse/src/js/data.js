@@ -325,7 +325,6 @@ const data = [
         price: 99,
         img: 'src/assets/xbox360.png',
     },
-
-
+   
 ]
 export default data;

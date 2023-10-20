@@ -454,3 +454,8 @@
     background-color: black;
   transform: scale(1.3);
 }
+
+.Successfull{
+    text-align: center;
+    font-size: 3rem;
+}

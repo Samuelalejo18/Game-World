@@ -4,10 +4,10 @@ import DatProvider from './Context/Data.Context';
 import { AuthProvider } from './context/auth.context';
 import CarMarket from './pages/Car';
 import ProtectedRoute from './pages/ProtectedRoute';
-
+import SuccessfulPayment from './pages/Successfull';
 import HomePage from './pages/home';
 import LoginPage from './pages/loginPage';
-
+import Pay from './pages/pay';
 import RegisterPage from './pages/registerPage';
 import Shop from './pages/shop';
 function App() {
@@ -27,12 +27,13 @@ function App() {
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-
+            <Route path="/Pay" element={<Pay />} />
 
 
             <Route element={<ProtectedRoute />}>
               <Route path='/CarMarket' element={<CarMarket />} />
-
+              <Route path="/Pay" element={<Pay />} />
+              <Route path="/SuccessfulPayment" element={<SuccessfulPayment />} />
             </Route>
 
           </Routes>
